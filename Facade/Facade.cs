@@ -1,40 +1,22 @@
 class Engine
 {
-  public void Start()
-  {
-    Console.WriteLine("Motor ligado");
-  }
+  public void Start() => Console.WriteLine("Motor ligado");
 
-  public void Stop()
-  {
-    Console.WriteLine("Motor desligado");
-  }
+  public void Stop() => Console.WriteLine("Motor desligado");
 }
 
 class Lights
 {
-  public void TurnOn()
-  {
-    Console.WriteLine("Faróis ligados");
-  }
+  public void TurnOn() => Console.WriteLine("Faróis ligados");
 
-  public void TurnOff()
-  {
-    Console.WriteLine("Faróis desligados");
-  }
+  public void TurnOff() => Console.WriteLine("Faróis desligados");
 }
 
 class FuelSystem
 {
-  public void PumpFuel()
-  {
-    Console.WriteLine("Bomba de combustível ligada");
-  }
+  public void PumpFuel() => Console.WriteLine("Bomba de combustível ligada");
 
-  public void StopPumpingFuel()
-  {
-    Console.WriteLine("Bomba de combustível desligada");
-  }
+  public void StopPumpingFuel() => Console.WriteLine("Bomba de combustível desligada");
 }
 
 class CarFacade

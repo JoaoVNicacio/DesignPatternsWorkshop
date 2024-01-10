@@ -6,11 +6,11 @@ interface ICoffee {
 // Implementação concreta do café simples
 class SimpleCoffee implements ICoffee {
   public getDescription(): string {
-      return "Café simples";
+    return "Café simples";
   }
 
   public getCost(): number {
-      return 1.0; // Preço do café simples
+    return 1.0; // Preço do café simples
   }
 }
 
@@ -19,45 +19,45 @@ abstract class CoffeeDecorator implements ICoffee {
   protected coffee: ICoffee;
 
   constructor(coffee: ICoffee) {
-      this.coffee = coffee;
+    this.coffee = coffee;
   }
 
   public getDescription(): string {
-      return this.coffee.getDescription();
+    return this.coffee.getDescription();
   }
 
   public getCost(): number {
-      return this.coffee.getCost();
+    return this.coffee.getCost();
   }
 }
 
 // Decorator para adicionar leite ao café
 class MilkDecorator extends CoffeeDecorator {
   constructor(coffee: ICoffee) {
-      super(coffee);
+    super(coffee);
   }
 
   public getDescription(): string {
-      return `${this.coffee.getDescription()}, com leite`;
+    return `${this.coffee.getDescription()}, com leite`;
   }
 
   public getCost(): number {
-      return this.coffee.getCost() + 0.5; // Adiciona o custo do leite
+    return this.coffee.getCost() + 0.5; // Adiciona o custo do leite
   }
 }
 
 // Decorator para adicionar caramelo ao café
 class CaramelDecorator extends CoffeeDecorator {
   constructor(coffee: ICoffee) {
-      super(coffee);
+    super(coffee);
   }
 
   public getDescription(): string {
-      return `${this.coffee.getDescription()}, com caramelo`;
+    return `${this.coffee.getDescription()}, com caramelo`;
   }
 
   public getCost(): number {
-      return this.coffee.getCost() + 0.75; // Adiciona o custo do caramelo
+    return this.coffee.getCost() + 0.75; // Adiciona o custo do caramelo
   }
 }
 

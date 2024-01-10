@@ -13,14 +13,14 @@ coffee = new CaramelDecorator(coffee);
 Console.WriteLine(coffee.GetDescription()); // Saída: Café simples, com leite, com caramelo
 Console.WriteLine($"Custo: ${coffee.GetCost()}"); // Saída: Custo: $2.25
 
-public interface ICoffee
+interface ICoffee
 {
   string GetDescription();
   decimal GetCost();
 }
 
 // Implementação concreta do café simples
-public class SimpleCoffee : ICoffee
+class SimpleCoffee : ICoffee
 {
   public string GetDescription()
   {
@@ -34,7 +34,7 @@ public class SimpleCoffee : ICoffee
 }
 
 // Decorator base
-public abstract class CoffeeDecorator : ICoffee
+abstract class CoffeeDecorator : ICoffee
 {
   protected ICoffee _coffee;
 
@@ -55,7 +55,7 @@ public abstract class CoffeeDecorator : ICoffee
 }
 
 // Decorator para adicionar leite ao café
-public class MilkDecorator : CoffeeDecorator
+class MilkDecorator : CoffeeDecorator
 {
   public MilkDecorator(ICoffee coffee) : base(coffee) { }
 
@@ -71,7 +71,7 @@ public class MilkDecorator : CoffeeDecorator
 }
 
 // Decorator para adicionar caramelo ao café
-public class CaramelDecorator : CoffeeDecorator
+class CaramelDecorator : CoffeeDecorator
 {
   public CaramelDecorator(ICoffee coffee) : base(coffee) { }
 

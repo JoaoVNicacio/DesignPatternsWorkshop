@@ -1,5 +1,3 @@
-using System;
-
 public sealed class Singleton
 {
   private static Singleton _instance = null;
@@ -18,8 +16,5 @@ public sealed class Singleton
     }
   }
 
-  public void ShowMessage()
-  {
-    Console.WriteLine("Exemplo de Singleton em C#");
-  }
+  public void ShowMessage() => Console.WriteLine("Exemplo de Singleton em C#");
 }

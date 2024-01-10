@@ -1,5 +1,3 @@
-namespace Factory;
-
 interface IVehicle
 {
   void Drive();
