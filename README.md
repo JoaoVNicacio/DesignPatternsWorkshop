@@ -1,0 +1,1 @@
+Repositório com exemplos para a Oficina de Desgin Patterns da Residência Onboard do Porto Digital.
